@@ -1,0 +1,19 @@
+Transaction Check
+Pre-requisites:
+1.	Java version 7 release 45 installed
+2.	Set up Tomcat Version 7.0 or higher
+3.	PosgreSQL 9.4 database Engine and create a database 
+4.	Run the DataBase table create scripts attached
+5.	Populate the table with some data
+Edit the params.txt File located in TransactionCheck\ClassesToRun directory to match the runtime parameters of your environment as follows: 
+Line1: Title=db-host=db_port=db_name=db_user=db_password
+Line2: http://localhost:8080/getTransactionStatusServlet?
+Ensure the Values in Red are replaced with the correct values as per your database set-up. The line2 value i.e the url to the service should be replaced with the one running in your environment and the question mark at the end should be present always
+
+Application Set-Up Process
+1.	Deploy War file in tomcat web container (Remember to edit the web.xml file in war file before deployment to match your environment.)
+2.	Start Tomcat and Test the service access url on a browser to ensure the service is accessible.
+3.	Start Windows cmd and set the classpaths to the location of the java classes and the location of the database connection class. e.g E:\GIT-HUB\TxnCheck\src>set CLASSPATH=E:\GIT-HUB\TxnCheck\src\lib\postgresql-9.4-1201.jdbc41.jar;E:\GIT-HUB\TxnCheck\src.
+4.	Ensure the path to Jdk is also set before running the application.
+5.	Run the application by invoking the transactionUpdate class e.g  “java  transactionUpdate”.
+
