@@ -1,0 +1,4 @@
+postgresDB=127.0.0.1=5432=postgres=postgres=postgres
+http://localhost:8080/SDP/getTransactionStatus?
+
+
